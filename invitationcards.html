@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Invitation Cards</title>
+    <link rel="stylesheet" href="style20.css">
+</head>
+    
+<header>
+    <div id="custom-alert" class="alert-box">
+    <div id="alert-message" class="alert-message"></div>
+    <button id="close-alert" class="close-alert">Close</button>
+</div>
+
+<!-- Alert Overlay -->
+<div class="alert-overlay"></div>
+    <div class="top-bar">
+        <div data-tts="Main Menu" class="menu-icon" onclick="toggleMenu()">
+            <span class="dash"></span>
+            <span class="dash"></span> 
+            <span class="dash"></span>
+        </div>
+        <button id="accessibility-btn" onclick="toggleAccessibility()" data-tts="Enable or disable accessibility features" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-universal-access-circle" viewBox="0 0 16 16">
+                <path d="M8 4.143A1.071 1.071 0 1 0 8 2a1.071 1.071 0 0 0 0 2.143m-4.668 1.47 3.24.316v2.5l-.323 4.585A.383.383 0 0 0 7 13.14l.826-4.017c.045-.18.301-.18.346 0L9 13.139a.383.383 0 0 0 .752-.125L9.43 8.43v-2.5l3.239-.316a.38.38 0 0 0-.047-.756H3.379a.38.38 0 0 0-.047.756Z"/>
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8"/>
+            </svg>
+        </button>
+        <div data-tts="Forever Weddings Logo" class="logo">
+            <img src="new4.png" alt="Forever Weddings Logo" style="width: 80px; height: 80px;" />
+        </div>
+        <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+            <input type="text" id="search-bar" placeholder="Search..." style="color: black;" data-tts="Search bar, type your query here">
+        </div>
+    </div>
+
+    <nav id="menu-bar" class="hidden">
+        <h2 class="menu-title" data-tts="Menu Title">حب <br style="color: white"> Forever</h2>
+        <div class="heart" style="text-align: center; font-size: 15px;" data-tts="Heart symbol">🖤</div>
+        <hr class="menu-divider">
+        <ul>
+            <li><a href="index.html" data-tts="Go to the homepage">Home</a></li>
+            <li class="dropdown">
+                <a href="planningtools.html" onclick="togglemenu(event)" data-tts="Planning tools">Planning Tools</a>
+                <a href="#" onclick="toggleSubmenu(event)" data-tts="Explore venues and locations">Venues & Locations</a>
+                <ul class="submenu hidden">
+                    <li><a href="indoorvenues.html" data-tts="View indoor venues">Indoor Venues</a></li>
+                    <li><a href="outdoorvenues.html" data-tts="View outdoor venues">Outdoor Venues</a></li>
+                </ul>
+                <a href="#" onclick="toggleSubmenu(event)" data-tts="Discover design and decor options">Design & Decor</a>
+                <ul class="submenu hidden">
+                    <li><a href="floral.html" data-tts="Explore floral arrangements">Floral Arrangements</a></li>
+                    <li><a href="lightingandambiance.html" data-tts="Enhance your venue with lighting and ambiance">Lighting & Ambiance</a></li>
+                    <li><a href="tables.html" data-tts="Check table installations">Table Installations</a></li>
+                </ul>
+                <a href="invitationcards.html" onclick="togglemenu(event)" data-tts="Invitation cards">Invitation Cards</a>
+                <a href="#" onclick="toggleSubmenu(event)" data-tts="Explore the Grooms Collection">Grooms Collection</a>
+                <ul class="submenu hidden">
+                    <li><a href="groomssuits.html" data-tts="Shop grooms suits">Grooms Suits</a></li>
+                    <li><a href="groomsmen.html" data-tts="Shop groomsmen suits">Groomsmen Suits</a></li>
+                    <li><a href="groomsaccessories.html" data-tts="Shop grooms accessories">Grooms Accessories</a></li>
+                </ul>
+                <a href="#" onclick="toggleSubmenu(event)" data-tts="Browse the Bridal Collection">Bridal Collection</a>
+                <ul class="submenu hidden">
+                    <li><a href="bridaldresses.html" data-tts="Shop bridal dresses">Bridal Dresses</a></li>
+                    <li><a href="bridesmaid.html" data-tts="Shop bridesmaid dresses">Bridesmaid Dresses</a></li>
+                    <li><a href="accessories.html" data-tts="Shop accessories and jewelry">Accessories & Jewelry</a></li>
+                </ul>
+            </li>
+        </ul>
+        <hr class="menu-divider">
+    </nav>
+</header>
+
+<a href="profile.html" class="favorites-box" data-tts="Favorites box">
+    <img src="favoriteslogo.png" alt="Favorites">
+</a>  
+
+<body>
+    <div id="body">
+        <section class="invitation-cards">
+            <h3 class="page-title" data-tts="Invitation Cards Page Title">Invitation Cards</h3>
+            <p class="page-description" data-tts="Description of invitation cards page">Bring your wedding dreams to life by choosing an invitation that speaks to you.</p>
+            
+            <div class="card-gallery" data-tts="Invitation cards gallery">
+                <div class="card-item">
+                    <img src="card1.jpeg" alt="Elegant Floral Card" class="card-image" onclick="openModal('card1.jpeg')" data-tts="Elegant Floral Card" />
+                    <div class="card-details">
+                        <p class="card-title" data-tts="Elegant Floral card title">Elegant Floral</p>
+                        <button class="favorite-button" onclick="addToFavorites('Elegant Floral', 'card1.jpeg')" data-tts="Add Elegant Floral to favorites">Add to Favorites</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="card2.jpeg" alt="Minimalistic Modern Card" class="card-image" onclick="openModal('card2.jpeg')" data-tts="Minimalistic Modern Card" />
+                    <div class="card-details">
+                        <p class="card-title" data-tts="Minimalistic Modern card title">Minimalistic Modern</p>
+                        <button class="favorite-button" onclick="addToFavorites('Minimalistic Modern', 'card2.jpeg')" data-tts="Add Minimalistic Modern to favorites">Add to Favorites</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="card3.jpeg" alt="Classic Vintage Card" class="card-image" onclick="openModal('card3.jpeg')" data-tts="Classic Vintage Card" />
+                    <div class="card-details">
+                        <p class="card-title" data-tts="Classic Vintage card title">Classic Vintage</p>
+                        <button class="favorite-button" onclick="addToFavorites('Classic Vintage', 'card3.jpeg')" data-tts="Add Classic Vintage to favorites">Add to Favorites</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="card4.jpeg" alt="Monochrome Card" class="card-image" onclick="openModal('card4.jpeg')" data-tts="Monochrome Card" />
+                    <div class="card-details">
+                        <p class="card-title" data-tts="Monochrome card title">Monochrome</p>
+                        <button class="favorite-button" onclick="addToFavorites('Monochrome', 'card4.jpeg')" data-tts="Add Monochrome to favorites">Add to Favorites</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="card5.jpeg" alt="Vintage Floral Card" class="card-image" onclick="openModal('card5.jpeg')" data-tts="Vintage Floral Card" />
+                    <div class="card-details">
+                        <p class="card-title" data-tts="Vintage Floral card title">Vintage Floral</p>
+                        <button class="favorite-button" onclick="addToFavorites('Vintage Floral', 'card5.jpeg')" data-tts="Add Vintage Floral to favorites">Add to Favorites</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="card6.jpeg" alt="Minimalistic Geometric Card" class="card-image" onclick="openModal('card6.jpeg')" data-tts="Minimalistic Geometric Card" />
+                    <div class="card-details">
+                        <p class="card-title" data-tts="Minimalistic Geometric card title">Minimalistic Geometric</p>
+                        <button class="favorite-button" onclick="addToFavorites('Minimalistic Geometric', 'card6.jpeg')" data-tts="Add Minimalistic Geometric to favorites">Add to Favorites</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="card7.jpeg" alt="Boho Chic Floral Card" class="card-image" onclick="openModal('card7.jpeg')" data-tts="Boho Chic Floral Card" />
+                    <div class="card-details">
+                        <p class="card-title" data-tts="Boho Chic Floral card title">Boho Chic Floral</p>
+                        <button class="favorite-button" onclick="addToFavorites('Boho Chic Floral', 'card7.jpeg')" data-tts="Add Boho Chic Floral to favorites">Add to Favorites</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="card8.jpeg" alt="Watercolor Florals Card" class="card-image" onclick="openModal('card8.jpeg')" data-tts="Watercolor Florals Card" />
+                    <div class="card-details">
+                        <p class="card-title" data-tts="Watercolor Florals card title">Watercolor Florals</p>
+                        <button class="favorite-button" onclick="addToFavorites('Watercolor Florals', 'card8.jpeg')" data-tts="Add Watercolor Florals to favorites">Add to Favorites</button>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <img src="card9.jpeg" alt="Art Deco Glamour Card" class="card-image" onclick="openModal('card9.jpeg')" data-tts="Art Deco Glamour Card" />
+                    <div class="card-details">
+                        <p class="card-title" data-tts="Art Deco Glamour card title">Art Deco Glamour</p>
+                        <button class="favorite-button" onclick="addToFavorites('Art Deco Glamour', 'card9.jpeg')" data-tts="Add Art Deco Glamour to favorites">Add to Favorites</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal for Enlarged Image -->
+        <div id="modal" class="modal" data-tts="Modal for enlarged image">
+            <div class="modal-content">
+                <button class="back-btn" onclick="closeModal()" data-tts="Back Button">
+                    <span class="arrow">&#8592;</span>
+                </button>
+
+                <img id="modalImage" class="modal-image" src="" alt="Enlarged Image" data-tts="Enlarged image" />
+            </div>
+        </div>
+        <script>
+    function toggleMenu() {
+        const menuBar = document.getElementById("menu-bar");
+        menuBar.classList.toggle("hidden");
+        menuBar.classList.toggle("visible");
+    }
+
+    document.addEventListener("click", function(event) {
+        const menuBar = document.getElementById("menu-bar");
+        const menuIcon = document.querySelector(".menu-icon");
+
+        if (!menuBar.contains(event.target) && !menuIcon.contains(event.target)) {
+            menuBar.classList.add("hidden");
+            menuBar.classList.remove("visible");
+        }
+    });
+
+    function toggleSubmenu(event) {
+        event.preventDefault();
+
+        const allSubmenus = document.querySelectorAll(".submenu");
+        
+        // Close all other submenus
+        allSubmenus.forEach(submenu => {
+            if (submenu !== event.target.nextElementSibling) {
+                submenu.classList.add("hidden");
+                submenu.classList.remove("visible");
+            }
+        });
+
+        
+        const submenu = event.target.nextElementSibling;
+        if (submenu && submenu.classList.contains("submenu")) {
+            submenu.classList.toggle("hidden");
+            submenu.classList.toggle("visible");
+        }
+    }
+
+
+
+      
+    
+    function toggleAccessibility() {
+        // Check if accessibility mode is enabled
+        const accessibilityEnabled = document.body.getAttribute('data-accessibility') === 'true';
+        document.body.setAttribute('data-accessibility', !accessibilityEnabled);
+
+        // Select the button element
+        const button = document.getElementById('accessibility-btn');
+
+        if (!accessibilityEnabled) {
+            // Enable TTS and add active class for styling
+            button.classList.add('active'); // *Add 'active' class*
+            enableTTS();
+        } else {
+            // Disable TTS and remove active class for styling
+            button.classList.remove('active'); // *Remove 'active' class*
+            disableTTS();
+        }
+    }
+
+    function enableTTS() {
+        const ttsElements = document.querySelectorAll('[data-tts]');
+        ttsElements.forEach(element => {
+            element.addEventListener('mouseenter', handleMouseEnter);
+            element.addEventListener('mouseleave', handleMouseLeave);
+        });
+    }
+
+    function disableTTS() {
+        const ttsElements = document.querySelectorAll('[data-tts]');
+        ttsElements.forEach(element => {
+            element.removeEventListener('mouseenter', handleMouseEnter);
+            element.removeEventListener('mouseleave', handleMouseLeave);
+        });
+    }
+
+    let synth = window.speechSynthesis;
+    let utterance;
+
+    function handleMouseEnter(event) {
+        const text = event.target.getAttribute('data-tts');
+        if (text) {
+            utterance = new SpeechSynthesisUtterance(text);
+            synth.speak(utterance);
+        }
+    }
+
+    function handleMouseLeave() {
+        if (utterance) {
+            synth.cancel();
+        }
+    }
+    document.getElementById("search-bar").addEventListener("keypress", function (event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter") {
+        event.preventDefault();
+        performSearch();
+    }
+});
+
+function performSearch() {
+    // Get the search input value, trim it to remove excess spaces, and convert it to lowercase
+    const query = document.getElementById("search-bar").value.trim().toLowerCase();
+
+    // Define an object that maps keywords to specific section URLs
+     const sections = {
+        "about us": "aboutus.html",
+        "planning tools": "planningtools.html",
+        "budget":"planningtools.html",
+        "guests list":"planningtools.html",
+        "indoor venues": "indoorvenues.html",
+        "venues":"indoorvenues.html",
+        "outdoor venues ":"outdoorvenues.html",
+        "bride":"bridaldresses.html",
+        "bridesmaids":" bridesmaid.html",
+        "accessories":"accessories.html",
+        "bridal collection": "bridaldresses.html",
+        "design and decor": "floral.html",
+        "flowers":"floral.html",
+        "tables ":"tables.html",
+        "lighting":"lightingandambiance.html",
+        "groom":"groomssuits.html",
+        "groomsmen":"groomsmen.html",
+        "suits":"groomssuits.html",
+        "groom accessories":"groomsaccessories.html",
+        "grooms accessories":"groomsaccessories.html",
+        "groomsmen accessories":"groomsaccessories.html",
+        "grooms":"groomssuits.html",
+        "start planning":"startplanning.html",
+        "real weddings":"viewall.html",
+    };
+
+
+    // Loop through each keyword and check if the search query contains that keyword
+    for (let keyword in sections) {
+        if (query.includes(keyword)) {
+            // If a match is found, navigate to the corresponding URL
+            window.location.href = sections[keyword];
+            return;  // Stop the function execution after redirection
+        }
+    }
+
+    // If no match is found, display an alert message
+    alert("No matching section found. Please try again.");
+}
+
+
+  
+        // Open Modal and Display Image
+        function openModal(imageSrc) {
+            document.getElementById('modal').style.display = 'block';
+            document.getElementById('modalImage').src = imageSrc;
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function addToFavorites(name, image) {
+    // Retrieve existing favorites from localStorage or initialize an empty array
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    // Check if the item already exists in the favorites
+    const alreadyFavorited = favorites.some(fav => fav.name === name && fav.image === image);
+    if (alreadyFavorited) {
+        // Show an alert that item is already favorited
+        showAlert("This item is already in your favorites!");
+        return;
+    }
+
+    // Add the new favorite
+    favorites.push({ name, image });
+
+    // Save back to localStorage
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+
+    // Show an alert that the item has been added to favorites
+    showAlert("Item added to your favorites!");
+}
+             function showAlert(message) {
+    const alertBox = document.getElementById('custom-alert');
+    const alertMessage = document.getElementById('alert-message');
+    const overlay = document.querySelector('.alert-overlay');
+
+    alertMessage.textContent = message;
+    alertBox.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// Function to hide alert (already defined)
+function hideAlert() {
+    const alertBox = document.getElementById('custom-alert');
+    const overlay = document.querySelector('.alert-overlay');
+    alertBox.style.display = 'none';
+    overlay.style.display = 'none';
+}
+
+// Close alert when clicking the overlay or the close button
+document.getElementById('close-alert').addEventListener('click', hideAlert);
+overlay.addEventListener('click', hideAlert);
+    </script>
+    </div>
+</body>
+</html>

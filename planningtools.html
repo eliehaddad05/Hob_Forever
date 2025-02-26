@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Planning Tools</title>
+    <link rel="stylesheet" href="style16.css">
+</head>
+<body>
+    
+    <!-- alert box -->
+    <div id="custom-alert" class="alert-box">
+    <p id="alert-message">This is an alert!</p>
+    <button id="close-alert">OK</button>
+</div>
+<div id="alert-overlay" class="alert-overlay"></div>
+ <header>
+        <div class="top-bar">
+    <div data-tts="Main Menu" class="menu-icon" onclick="toggleMenu()">
+        <span class="dash"></span>
+        <span class="dash"></span> 
+        <span class="dash"></span>
+    </div>
+            <button id="accessibility-btn" onclick="toggleAccessibility()" data-tts="Enable or disable accessibility features" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-universal-access-circle" viewBox="0 0 16 16">
+  <path d="M8 4.143A1.071 1.071 0 1 0 8 2a1.071 1.071 0 0 0 0 2.143m-4.668 1.47 3.24.316v2.5l-.323 4.585A.383.383 0 0 0 7 13.14l.826-4.017c.045-.18.301-.18.346 0L9 13.139a.383.383 0 0 0 .752-.125L9.43 8.43v-2.5l3.239-.316a.38.38 0 0 0-.047-.756H3.379a.38.38 0 0 0-.047.756Z"/>
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8"/>
+</svg></button>
+    <div data-tts="hob forever"class="logo">
+        <img src="new4.png" alt="Forever Weddings Logo" style="width: 80px; height: 80px;" />
+    </div>
+    <div class="search-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg>
+                <input type="text" id="search-bar" placeholder="Search..." style="color: black;" data-tts="Search bar, type your query here">
+            </div>
+        
+        <div class="log-in-button" style="border: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16" style="margin-top:0px;""padding-left:17px;">
+  <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" style="margin-bottom:4px;" />
+  <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+</svg>
+        <a href="login.html"  style= "border:none;" "outline:none;" "background: transparent;"><button style="background-color: transparent;" "border: none;" data-tts="Log in to access your account" >Log In</button></a>
+    </div>
+        </div>
+
+
+     <nav id="menu-bar" class="hidden">
+    <h2 class="menu-title">حب <br style="color: white"> Forever</h2>
+         <div class="heart" style="text-align: center; font-size: 15px;">🖤</div>
+    <hr class="menu-divider">
+    <ul>
+       <li><a href="index.html" data-tts="Go to the homepage">Home</a></li>
+       <li class="dropdown">
+     <a href="planningtools.html" onclick="togglemenu(event)" data-tts="Planning tools">Planning Tools</a>
+            <a href="#" onclick="toggleSubmenu(event)"  data-tts="Explore venues and locations">Venues & Locations</a>
+    <ul class="submenu hidden";>
+        <li><a href="indoorvenues.html" data-tts="View indoor venues">Indoor Venues</a></li>
+        <li><a href="outdoorvenues.html"data-tts="View outdoor venues">Outdoor Venues</a></li>
+    </ul>
+            <a href="#" onclick="toggleSubmenu(event)" data-tts="Discover design and decor options">Design  & Decor</a>
+           <ul class="submenu hidden";>
+        <li><a href="floral.html"data-tts="Explore floral arrangements">Floral Arrangements</a></li>
+        <li><a href="lightingandambiance.html"data-tts="Enhance your venue with lighting and ambiance">Lighting & Ambiance</a></li>
+        <li><a href="tables.html"data-tts="Check table installations">Table Installations</a></li>
+               
+    </ul>
+           <a href="invitationcards.html" onclick="togglemenu(event)" data-tts="invitation cards">Invitation Cards</a>
+            <a href="#" onclick="toggleSubmenu(event)"  data-tts="Explore venues and locations">Grooms Collection</a>
+            <ul class="submenu hidden";>
+        <li><a href="groomssuits.html" data-tts="Shop grooms suits">Grooms Suits</a></li>
+        <li><a href="groomsmen.html"data-tts="shop groomsmen Suits">Groomsmens Suits</a></li>
+                <li><a href="groomsaccessories.html"data-tts="shop grooms accessories">Grooms Accessories</a></li>
+    </ul>
+           <a href="#" onclick="toggleSubmenu(event)" data-tts="Browse the bridal collection">Bridal Collection</a>
+
+           <ul class="submenu hidden";>
+        <li><a href="bridaldresses.html
+"data-tts="Shop bridal dresses">Bridal Dresses
+</a></li>
+               <li><a href="bridesmaid.html
+"data-tts="Shop bridesmaid dresses">Bridesmaid Dresses
+</a></li>
+        <li><a href="accessories.html"data-tts="Shop accessories and jewelry">Accessories & Jewelry</a></li>
+    </ul>
+</li>
+    </ul>
+        
+          <hr class="menu-divider">
+</nav>
+
+    
+    </header>
+    <main>
+        <!-- Budget Section -->
+    <section class="card">
+    <div class="card-header">
+        <img src="budgetlogo.png" alt="Logo" class="card-logo">
+        <h2 data-tts="Budget Management">Budget Management</h2>
+    </div>
+    <div class="budget-item">
+        <label for="venue-budget"data-tts=" enter venue Budget">Venue Budget</label>
+        <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="venue-budget" placeholder="Enter amount $" class="budget-input">
+        </div>
+    </div>
+    <div class="budget-item">
+        <label for="decor-budget" data-tts=" enter design and decor Budget">Design & Decor Budget</label>
+        <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="decor-budget" placeholder="Enter amount $" class="budget-input">
+        </div>
+    </div>
+    <div class="budget-item">
+        <label for="bride-dress-budget" data-tts="enter brides dress Budget">Bride's Dress Budget</label>
+        <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="bride-dress-budget" placeholder="Enter amount $" class="budget-input">
+        </div>
+         <div class="budget-item">
+        <label for="decor-budget" data-tts=" enter grooms suit budget">Groom's Suit Budget</label>
+        <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="decor-budget" placeholder="Enter amount $" class="budget-input">
+        </div>
+    </div>
+    </div>
+    <div class="budget-item">
+        <label for="bridesmaids-budget" data-tts="enter bridesmaids dresses Budget">Bridesmaids' Dresses Budget</label>
+        <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="bridesmaids-budget" placeholder="Enter amount $" class="budget-input">
+        </div>
+         <div class="budget-item">
+        <label for="decor-budget" data-tts=" enter design and decor Budget">Groomsmen's Suits Budget</label>
+        <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="decor-budget" placeholder="Enter amount $" class="budget-input">
+        </div>
+    </div>
+    </div>
+    <div class="budget-item">
+        <label for="accessories-budget" data-tts="enter accessories and jewlery Budget">Accessories & Jewelry Budget (for Bride & Groom)</label>
+        <div class="input-wrapper">
+            <span class="currency-symbol">$</span>
+            <input type="number" id="accessories-budget" placeholder="Enter amount $" class="budget-input">
+        </div>
+    </div>
+    <p data-tts="total budget">Total Budget: $<span id="total-budget">0</span></p>
+</section>
+
+
+        <!-- Guest List Section -->
+       <section class="card">
+    <div class="card-header">
+        <img src="guestsllistlogo.png" alt="Logo" class="card-logo">
+        <h2 data-tts="guests list">Guest List</h2>
+    </div>
+   <div class="input-wrapper">
+    <label for="guest-count-number" data-tts="enter guest count">Number of Guests</label>
+    <input 
+        type="number" 
+        id="guest-count-input" 
+        placeholder="Enter number of guests" 
+        min="0" 
+        oninput="updateGuestCount(this.value)" 
+    />
+</div>
+
+   
+</section>
+
+
+        <!-- Wedding Date Section -->
+        <section class="card">
+            <div class="card-header">
+                <img src="datelogo.png" alt="Logo" class="card-logo">
+            <h2 data-tts="enter weddimg date here">Wedding Date</h2>
+            </div>
+            <input type="date" id="wedding-date">
+        </section>
+        
+        
+        
+       <section class="card">
+    <div class="card-container">
+        <!-- Left Section: Form -->
+        <div class="card-content">
+            <div class="card-header2">
+                <img src="appoitmentlogo.png" alt="Logo" class="card-logo">
+                <h2 data-tts="take an appointment here">Book Your Appointment</h2>
+            </div>
+            <form action="your-server-endpoint" method="POST" class="card-form">
+                <label for="appointment-date">Select Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required>
+                
+                <label for="appointment-time">Select Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required>
+                
+                <label for="user-name">Your Name:</label>
+                <input type="text" id="user-name" name="user-name" placeholder="Enter your name" required>
+                
+                <label for="user-email">Your Email:</label>
+                <input type="email" id="user-email" name="user-email" placeholder="Enter your email" required>
+                
+                <button type="submit" class="card-button">Book Appointment</button>
+            </form>
+        </div>
+        <!-- Right Section: Image -->
+        <div class="card-image">
+            <img src="company.png" alt="Appointment Image">
+        </div>
+    </div>
+</section>
+
+    </main>
+    
+</body>
+    
+<div class="footer-container">
+    <div class="about-us">
+        <h4><a href="aboutus.html" class="about-button" data-tts="click on this link to know more about us">About Us</a></h4>
+       
+    </div>
+    <div class="contact-us">       <h4 data-tts="Contact us">Contact Us</h4>
+        <a href="https://wa.me/7699999" target="_blank" style="text-decoration: none">
+            <img src="whatsaap.png" alt="WhatsApp" data-tts="our whatsapp">
+        </a>
+        <a href="https://www.instagram.com/your-instagram-handle" target="_blank" style="text-decoration: none">
+            <img src="instagram.png" alt="Instagram" data-tts="our instagram page">
+        </a>
+        <a href="mailto:your-email@example.com" style="text-decoration: none">
+            <img src="email.png" alt="Email" data-tts="our email">
+        </a>
+    </div>
+    <div class="made-with-love">
+        <p data-tts="Made with love">Made with ❤</p>
+        <p data-tts="2024 hob Forever Weddings. All Rights Reserved.">&copy; 2024 حب Forever Weddings. All Rights Reserved.</p>
+    </div>
+</div>
+<script>
+  function updateGuestCount(value) {
+    const guestCountSpan = document.getElementById('guest-count');
+    guestCountSpan.textContent = value || 0; // Show 0 if the field is empty
+}
+
+const budgetInputs = document.querySelectorAll('.budget-input');
+const totalBudgetElement = document.getElementById('total-budget');
+const alertBox = document.getElementById('custom-alert');
+const alertMessage = document.getElementById('alert-message');
+const closeAlertButton = document.getElementById('close-alert');
+const overlay = document.getElementById('alert-overlay');
+// Update total budget dynamically
+function updateTotalBudget() {
+    let total = 0;
+    budgetInputs.forEach(input => {
+        const value = parseFloat(input.value);
+        if (!isNaN(value)) {
+            total += value;
+        }
+    });
+    totalBudgetElement.textContent = total.toFixed(2); // Display with two decimal places
+}
+    function showAlert(message) {
+    alertMessage.textContent = message;
+    alertBox.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// Function to hide alert
+function hideAlert() {
+    alertBox.style.display = 'none';
+    overlay.style.display = 'none';
+}
+budgetInputs.forEach(input => {
+    input.addEventListener('input', function () {
+        const value = parseFloat(this.value);
+
+        if (value < 0) {
+           this.value = ''; // Reset the input value
+            showAlert('Budget value cannot be negative.');
+        } else {
+            updateTotalBudget();
+        }
+    });
+});
+    closeAlertButton.addEventListener('click', hideAlert);
+
+// Close alert when clicking the overlay
+overlay.addEventListener('click', hideAlert);
+// Add a single event listener to each budget input
+budgetInputs.forEach(input => {
+    const currencySymbol = input.previousElementSibling; // Select the $ symbol
+
+    // Initially hide the currency symbol
+    currencySymbol.style.visibility = 'hidden';
+
+    input.addEventListener('input', function () {
+        const value = parseFloat(this.value);
+
+    
+        // Show/hide the currency symbol based on input
+        if (this.value) {
+            currencySymbol.style.visibility = 'visible';
+        } else {
+            currencySymbol.style.visibility = 'hidden';
+        }
+
+        // Adjust the $ symbol position based on input length
+        const inputWidth = this.value.length * 8 + 7; // Adjust multiplier for your font size
+        currencySymbol.style.left = `${10 + inputWidth}px`;
+    });
+});
+ function showAlert(message) {
+            const alertBox = document.getElementById('custom-alert');
+            const alertMessage = document.getElementById('alert-message');
+            const overlay = document.querySelector('.alert-overlay');
+
+            alertMessage.textContent = message;
+            alertBox.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        document.getElementById('close-alert').addEventListener('click', function () {
+            const alertBox = document.getElementById('custom-alert');
+            const overlay = document.querySelector('.alert-overlay');
+            alertBox.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+
+</script>
+    <script>
+    
+       function toggleMenu() {
+        const menuBar = document.getElementById("menu-bar");
+        menuBar.classList.toggle("hidden");
+        menuBar.classList.toggle("visible");
+    }
+
+    document.addEventListener("click", function(event) {
+        const menuBar = document.getElementById("menu-bar");
+        const menuIcon = document.querySelector(".menu-icon");
+
+        if (!menuBar.contains(event.target) && !menuIcon.contains(event.target)) {
+            menuBar.classList.add("hidden");
+            menuBar.classList.remove("visible");
+        }
+    });
+
+    function toggleSubmenu(event) {
+        event.preventDefault();
+
+        const allSubmenus = document.querySelectorAll(".submenu");
+        
+        // Close all other submenus
+        allSubmenus.forEach(submenu => {
+            if (submenu !== event.target.nextElementSibling) {
+                submenu.classList.add("hidden");
+                submenu.classList.remove("visible");
+            }
+        });
+
+        
+        const submenu = event.target.nextElementSibling;
+        if (submenu && submenu.classList.contains("submenu")) {
+            submenu.classList.toggle("hidden");
+            submenu.classList.toggle("visible");
+        }
+    }
+
+          
+    function toggleAccessibility() {
+        // Check if accessibility mode is enabled
+        const accessibilityEnabled = document.body.getAttribute('data-accessibility') === 'true';
+        document.body.setAttribute('data-accessibility', !accessibilityEnabled);
+
+        // Select the button element
+        const button = document.getElementById('accessibility-btn');
+
+        if (!accessibilityEnabled) {
+            // Enable TTS and add active class for styling
+            button.classList.add('active'); // *Add 'active' class*
+            enableTTS();
+        } else {
+            // Disable TTS and remove active class for styling
+            button.classList.remove('active'); // *Remove 'active' class*
+            disableTTS();
+        }
+    }
+
+    function enableTTS() {
+        const ttsElements = document.querySelectorAll('[data-tts]');
+        ttsElements.forEach(element => {
+            element.addEventListener('mouseenter', handleMouseEnter);
+            element.addEventListener('mouseleave', handleMouseLeave);
+        });
+    }
+
+    function disableTTS() {
+        const ttsElements = document.querySelectorAll('[data-tts]');
+        ttsElements.forEach(element => {
+            element.removeEventListener('mouseenter', handleMouseEnter);
+            element.removeEventListener('mouseleave', handleMouseLeave);
+        });
+    }
+
+    let synth = window.speechSynthesis;
+    let utterance;
+
+    function handleMouseEnter(event) {
+        const text = event.target.getAttribute('data-tts');
+        if (text) {
+            utterance = new SpeechSynthesisUtterance(text);
+            synth.speak(utterance);
+        }
+    }
+
+    function handleMouseLeave() {
+        if (utterance) {
+            synth.cancel();
+        }
+    }
+    document.getElementById("search-bar").addEventListener("keypress", function (event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter") {
+        event.preventDefault();
+        performSearch();
+    }
+});
+
+function performSearch() {
+    // Get the search input value, trim it to remove excess spaces, and convert it to lowercase
+    const query = document.getElementById("search-bar").value.trim().toLowerCase();
+
+    // Define an object that maps keywords to specific section URLs
+     const sections = {
+        "about us": "aboutus.html",
+        "planning tools": "planningtools.html",
+        "budget":"planningtools.html",
+        "guests list":"planningtools.html",
+        "indoor venues": "indoorvenues.html",
+        "venues":"indoorvenues.html",
+        "outdoor venues ":"outdoorvenues.html",
+        "bride":"bridaldresses.html",
+        "bridesmaids":" bridesmaid.html",
+        "accessories":"accessories.html",
+        "bridal collection": "bridaldresses.html",
+        "design and decor": "floral.html",
+        "flowers":"floral.html",
+        "tables ":"tables.html",
+        "lighting":"lightingandambiance.html",
+        "groom":"groomssuits.html",
+        "groomsmen":"groomsmen.html",
+        "suits":"groomssuits.html",
+        "groom accessories":"groomsaccessories.html",
+        "grooms accessories":"groomsaccessories.html",
+        "groomsmen accessories":"groomsaccessories.html",
+        "grooms":"groomsmensuits.html",
+        "start planning":"startplanning.html",
+        "real weddings":"viewall.html",
+    };
+
+    // Loop through each keyword and check if the search query contains that keyword
+    for (let keyword in sections) {
+        if (query.includes(keyword)) {
+            // If a match is found, navigate to the corresponding URL
+            window.location.href = sections[keyword];
+            return;  // Stop the function execution after redirection
+        }
+    }
+
+    // If no match is found, display an alert message
+    alert("No matching section found. Please try again.");
+}
+
+        
+    </script>
+</html>

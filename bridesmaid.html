@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridesmaids Dresses</title>
+    <link rel="stylesheet" href="style7.css"> <!-- Link to your external CSS file -->
+</head>
+<body>
+    <div id="custom-alert" class="alert-box">
+    <div id="alert-message" class="alert-message"></div>
+    <button id="close-alert" class="close-alert">Close</button>
+</div>
+
+<!-- Alert Overlay -->
+<div class="alert-overlay"></div>
+    <header>
+    <div class="top-bar">
+        <!-- Menu Icon -->
+        <div data-tts="Main Menu" class="menu-icon" onclick="toggleMenu()">
+            <span class="dash"></span>
+            <span class="dash"></span>
+            <span class="dash"></span>
+        </div>
+
+        <!-- Accessibility Button -->
+        <button id="accessibility-btn" onclick="toggleAccessibility()" data-tts="Enable or disable accessibility features">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-universal-access-circle" viewBox="0 0 16 16">
+                <path d="M8 4.143A1.071 1.071 0 1 0 8 2a1.071 1.071 0 0 0 0 2.143m-4.668 1.47 3.24.316v2.5l-.323 4.585A.383.383 0 0 0 7 13.14l.826-4.017c.045-.18.301-.18.346 0L9 13.139a.383.383 0 0 0 .752-.125L9.43 8.43v-2.5l3.239-.316a.38.38 0 0 0-.047-.756H3.379a.38.38 0 0 0-.047.756Z" />
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8" />
+            </svg>
+        </button>
+
+        <!-- Logo -->
+        <div data-tts="hob forever"class="logo">
+        <img src="new4.png" alt="Forever Weddings Logo" style="width: 80px; height: 80px;" />
+    </div>
+        <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="margin-bottom: 4%;">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+            <input type="text" id="search-bar" placeholder="Search..." style="color: black;" data-tts="Search bar, type your query here">
+        </div>
+    </div>
+
+        <!-- Navigation Menu -->
+        <nav id="menu-bar" class="hidden">
+            <h2 class="menu-title">حب <br>Forever</h2>
+            <div class="heart" style="text-align: center; font-size: 15px;">🖤</div>
+            <hr class="menu-divider">
+            <ul>
+                <li><a href="index.html" data-tts="Go to the homepage">Home</a></li>
+                <li class="dropdown">
+                    <!-- Planning Tools -->
+                     <a href="planningtools.html" onclick="togglemenu(event)" data-tts="Planning tools">Planning Tools</a>
+
+                    <!-- Venues & Locations -->
+                    <a href="#" onclick="toggleSubmenu(event)" data-tts="Explore venues and locations">Venues & Locations</a>
+                    <ul class="submenu hidden">
+                        <li><a href="indoorvenues.html" data-tts="View indoor venues">Indoor Venues</a></li>
+                        <li><a href="outdoorvenues.html" data-tts="View outdoor venues">Outdoor Venues</a></li>
+                    </ul>
+
+                    <!-- Design & Decor -->
+                    <a href="#" onclick="toggleSubmenu(event)" data-tts="Discover design and decor options">Design & Decor</a>
+                    <ul class="submenu hidden">
+                        <li><a href="floral.html" data-tts="Explore floral arrangements">Floral Arrangements</a></li>
+                        <li><a href="lightingandambiance.html" data-tts="Enhance your venue with lighting and ambiance">Lighting & Ambiance</a></li>
+                        <li><a href="tables.html" data-tts="Check table installations">Table Installations</a></li>
+                    </ul>
+                    <a href="invitationcards.html" onclick="togglemenu(event)" data-tts="invitation cards">Invitation Cards</a>
+ <a href="#" onclick="toggleSubmenu(event)"  data-tts="Explore venues and locations">Grooms Collection</a>
+            <ul class="submenu hidden";>
+        <li><a href="groomssuits.html" data-tts="Shop grooms suits">Grooms Suits</a></li>
+        <li><a href="groomsmen.html"data-tts="shop groomsmen Suits">Groomsmens Suits</a></li>
+        <li><a href="groomsaccessories.html"data-tts="shop grooms accessories">Grooms Accessories</a></li>
+    </ul>
+                    <!-- Bridal Collection -->
+                    <a href="#" onclick="toggleSubmenu(event)" data-tts="Browse the bridal collection">Bridal Collection</a>
+                    <ul class="submenu hidden">
+                        <li><a href="bridaldresses.html" data-tts="Shop bridal dresses">Bridal Dresses</a></li>
+                        <li><a href="bridesmaid.html" data-tts="Shop bridesmaid dresses">Bridesmaid Dresses</a></li>
+                        <li><a href="accessories.html" data-tts="Shop accessories and jewelry">Accessories & Jewelry</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="menu-divider">
+        </nav>
+    </header>
+
+      <a href="profile.html" class="favorites-box">
+    
+    <img src="favoriteslogo.png">
+    </a>
+    <section id="bridesmaids-dresses">
+        <h3 data-tts="Bridal Collection">Bridal Collection</h3>
+
+        <!-- 1st Part: Bridesmaids Dress Styles -->
+        <div class="section" id="bridesmaid-styles">
+           <h4  data-tts="Bridesmaids Dress Styles">Bridesmaids Dress Styles</h4>
+            <ul>
+                <li>
+                    <strong data-tts="A-line">A-line</strong>
+                    <div class="image-gallery">
+                        <img src="Aline3.jpg" alt="A-line bridesmaid dress 1">
+                        <img src="Aline4.jpg" alt="A-line bridesmaid dress 2">
+                        <img src="Aline9.jpg" alt="A-line bridesmaid dress 3">
+                        <img src="Aline10.jpg" alt="A-line bridesmaid dress 4">
+                        <img src="Aline11.jpg" alt="A-line bridesmaid dress 5">
+                    </div>""
+                    <button class="add-button" onclick="addToFavorites('A-line Bridesmaids ', 'Aline3.jpg')" data-tts=" Add to Favorites" >Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Empire Waist">Empire Waist</strong>
+                    <div class="image-gallery">
+                        <img src="empire1.jpg" alt="Empire waist bridesmaid dress 1">
+                        <img src="empire2.jpg" alt="Empire waist bridesmaid dress 2">
+                        <img src="empire3.jpg" alt="Empire waist bridesmaid dress 3">
+                        <img src="empire4.jpg" alt="Empire waist bridesmaid dress 4">
+                        <img src="empire5.jpg" alt="Empire waist bridesmaid dress 5">
+                    </div>
+                     <button class="add-button" onclick="addToFavorites('Empire Waist', 'empire1.jpg')" data-tts=" Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Mermaid">Mermaid</strong>
+                    <div class="image-gallery">
+                        <img src="mermaid6.jpg" alt="Mermaid bridesmaid dress 1">
+                        <img src="mermaid7.jpg" alt="Mermaid bridesmaid dress 2">
+                        <img src="mermaid8.jpg" alt="Mermaid bridesmaid dress 3">
+                        <img src="mermaid9.jpg" alt="Mermaid bridesmaid dress 4">
+                        <img src="mermaid10.jpg" alt="Mermaid bridesmaid dress 5">
+                    </div>
+                    <button class="add-button" onclick="addToFavorites('Mermaid', 'mermaid6.jpg')"data-tts=" Add to Favorites">Add to Favorites</button>
+               
+                    
+                </li>
+            </ul>
+        </div>
+
+        <!-- 2nd Part: Fabric Types -->
+        <div class="section" id="bridesmaid-fabrics">
+            <h4 data-tts="Fabric Types">Fabric Types</h4>
+            <ul>
+                <li>
+                    <strong data-tts="Chiffon">Chiffon</strong>
+                    <div class="image-gallery">
+                        <img src="chiffon1.jpg" alt="Chiffon bridesmaid dress 1">
+                        <img src="chiffon2.jpg" alt="Chiffon bridesmaid dress 2">
+                        <img src="chiffon3.jpg" alt="Chiffon bridesmaid dress 3">
+                        <img src="chiffon4.jpg" alt="Chiffon bridesmaid dress 4">
+                        <img src="chiffon5.jpg" alt="Chiffon bridesmaid dress 5">
+                    </div>
+                     <button class="add-button" onclick="addToFavorites('Chiffon', 'chiffon1.jpg')"data-tts=" Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Satin">Satin</strong>
+                    <div class="image-gallery">
+                        <img src="satin6.jpg" alt="Satin bridesmaid dress 1">
+                        <img src="satin7.jpg" alt="Satin bridesmaid dress 2">
+                        <img src="satin8.jpg" alt="Satin bridesmaid dress 3">
+                        <img src="satin9.jpg" alt="Satin bridesmaid dress 4">
+                        <img src="satin10.jpg" alt="Satin bridesmaid dress 5">
+                    </div>
+                    <button class="add-button" onclick="addToFavorites('Satin', 'satin6.jpg')"data-tts=" Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Velvet">Velvet</strong>
+                    <div class="image-gallery">
+                        <img src="velvet1.jpg" alt="Velvet bridesmaid dress 1">
+                        <img src="velvet2.jpg" alt="Velvet bridesmaid dress 2">
+                        <img src="velvet3.jpg" alt="Velvet bridesmaid dress 3">
+                        <img src="velvet4.jpg" alt="Velvet bridesmaid dress 4">
+                        <img src="velvet5.jpg" alt="Velvet bridesmaid dress 5">
+                    </div>
+                    <button class="add-button" onclick="addToFavorites('Velvet', 'velvet1.jpg')"data-tts=" Add to Favorites">Add to Favorites</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 3rd Part: Color Options -->
+        <div class="section" id="bridesmaid-colors">
+            <h4 data-tts="Color Options">Color Options</h4>
+            <ul>
+                <li>
+                    <strong data-tts="Blush Pink">Blush Pink</strong>
+                    <div class="image-gallery">
+                        <img src="blushpink1.jpg" alt="Blush Pink bridesmaid dress 1">
+                        <img src="blushpink2.jpg" alt="Blush Pink bridesmaid dress 2">
+                        <img src="blushpink3.jpg" alt="Blush Pink bridesmaid dress 3">
+                        <img src="blushpink4.jpg" alt="Blush Pink bridesmaid dress 4">
+                        <img src="blushpink5.jpg" alt="Blush Pink bridesmaid dress 5">
+                    </div>
+                     <button class="add-button" onclick="addToFavorites('Blush Pink', 'blushpink1.jpg')"data-tts=" Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Royal Blue">Royal Blue</strong>
+                    <div class="image-gallery">
+                        <img src="royalblue1.jpg" alt="Royal Blue bridesmaid dress 1">
+                        <img src="royalblue2.jpg" alt="Royal Blue bridesmaid dress 2">
+                        <img src="royalblue3.jpg" alt="Royal Blue bridesmaid dress 3">
+                        <img src="royalblue4.jpg" alt="Royal Blue bridesmaid dress 4">
+                        <img src="royalblue5.jpg" alt="Royal Blue bridesmaid dress 5">
+                    </div>
+                     <button class="add-button" onclick="addToFavorites('Royal Blue', 'royalblue1.jpg')"data-tts=" Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Lavender">Lavender</strong>
+                    <div class="image-gallery">
+                        <img src="lavender1.jpg" alt="Lavender bridesmaid dress 1">
+                        <img src="lavender2.jpg" alt="Lavender bridesmaid dress 2">
+                        <img src="lavender3.jpg" alt="Lavender bridesmaid dress 3">
+                        <img src="lavender4.jpg" alt="Lavender bridesmaid dress 4">
+                        <img src="lavender5.jpg" alt="Lavender bridesmaid dress 5">
+                    </div>
+                     <button class="add-button" onclick="addToFavorites('Lavender', 'lavender1.jpg')"data-tts=" Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Champagne">Champagne</strong>
+                    <div class="image-gallery">
+                        <img src="champagne1.jpg" alt="Champagne bridesmaid dress 1">
+                        <img src="champagne2.jpg" alt="Champagne bridesmaid dress 2">
+                        <img src="champagne3.jpg" alt="Champagne bridesmaid dress 3">
+                        <img src="champagne4.jpg" alt="Champagne bridesmaid dress 4">
+                        <img src="champagne5.jpg" alt="Champagne bridesmaid dress 5">
+                    </div>
+                     <button class="add-button" onclick="addToFavorites('Champagne', 'champagne1.jpg')"data-tts=" Add to Favorites">Add to Favorites</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 4th Part: Real Bridesmaids -->
+        <div class="section" id="real-bridesmaids">
+            <h4 data-tts="Real Bridesmaids">Real Bridesmaids</h4>
+            <p>See how our bridesmaids look on their special day.</p>
+            <div class="image-gallery">
+                <img src="realbridesmaid1.jpg" alt="Real bridesmaid 1">
+                <img src="realbridesmaid2.jpg" alt="Real bridesmaid 2">
+                <img src="realbridesmaid3.jpg" alt="Real bridesmaid 3">
+                <img src="realbridesmaid4.jpg" alt="Real bridesmaid 4">
+                <img src="realbridesmaid5.jpg" alt="Real bridesmaid 5">
+            </div>
+    
+        </div>
+
+        <!-- 5th Part: Sizing & Customization -->
+        <div class="section" id="sizing-customization">
+            <h3 data-tts="Sizing & Customization">Sizing & Customization</h3>
+            <p data-tts="We offer a wide range of sizes, including custom sizing options to ensure a perfect fit for every bridesmaid">We offer a wide range of sizes, including custom sizing options to ensure a perfect fit for every bridesmaid.</p>
+            <p data-tts="Customizations available upon request">Customizations available upon request.</p>
+        </div>
+    </section>
+     <script>
+         function toggleMenu() {
+    const menuBar = document.getElementById("menu-bar");
+    menuBar.classList.toggle("hidden");
+    menuBar.classList.toggle("visible");
+}
+
+document.addEventListener("click", function (event) {
+    const menuBar = document.getElementById("menu-bar");
+    const menuIcon = document.querySelector(".menu-icon");
+
+    if (!menuBar.contains(event.target) && !menuIcon.contains(event.target)) {
+        menuBar.classList.add("hidden");
+        menuBar.classList.remove("visible");
+    }
+});
+
+function toggleSubmenu(event) {
+    event.preventDefault();
+
+    const allSubmenus = document.querySelectorAll(".submenu");
+
+    // Close all other submenus
+    allSubmenus.forEach(submenu => {
+        if (submenu !== event.target.nextElementSibling) {
+            submenu.classList.add("hidden");
+            submenu.classList.remove("visible");
+        }
+    });
+
+    const submenu = event.target.nextElementSibling;
+    if (submenu && submenu.classList.contains("submenu")) {
+        submenu.classList.toggle("hidden");
+        submenu.classList.toggle("visible");
+    }
+}
+
+function toggleAccessibility() {
+    const accessibilityEnabled = document.body.getAttribute('data-accessibility') === 'true';
+    document.body.setAttribute('data-accessibility', !accessibilityEnabled);
+
+    const button = document.getElementById('accessibility-btn');
+    if (!accessibilityEnabled) {
+        button.classList.add('active');
+        enableTTS();
+    } else {
+        button.classList.remove('active');
+        disableTTS();
+    }
+}
+
+function enableTTS() {
+    const ttsElements = document.querySelectorAll('[data-tts]');
+    ttsElements.forEach(element => {
+        element.addEventListener('mouseenter', handleMouseEnter);
+        element.addEventListener('mouseleave', handleMouseLeave);
+    });
+}
+
+function disableTTS() {
+    const ttsElements = document.querySelectorAll('[data-tts]');
+    ttsElements.forEach(element => {
+        element.removeEventListener('mouseenter', handleMouseEnter);
+        element.removeEventListener('mouseleave', handleMouseLeave);
+    });
+}
+
+let synth = window.speechSynthesis;
+let utterance;
+
+function handleMouseEnter(event) {
+    const text = event.target.getAttribute('data-tts');
+    if (text) {
+        utterance = new SpeechSynthesisUtterance(text);
+        synth.speak(utterance);
+    }
+}
+
+function handleMouseLeave() {
+    if (utterance) {
+        synth.cancel();
+    }
+}
+
+    // Function to add an item to favorites
+    function addToFavorites(name, image) {
+        // Retrieve existing favorites from localStorage or initialize an empty array
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        // Check if the item already exists in the favorites
+        const alreadyFavorited = favorites.some(fav => fav.name === name && fav.image === image);
+        if (alreadyFavorited) {
+            alert("This item is already in your favorites!");
+            return;
+        }
+
+        // Add the new favorite
+        favorites.push({ name, image });
+
+        // Save back to localStorage
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+
+        alert("Item added to your favorites!");
+    }
+         document.getElementById("search-bar").addEventListener("keypress", function (event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter") {
+        event.preventDefault();
+        performSearch();
+    }
+});
+
+ function performSearch() {
+    // Get the search input value, trim it to remove excess spaces, and convert it to lowercase
+    const query = document.getElementById("search-bar").value.trim().toLowerCase();
+
+    // Define an object that maps keywords to specific section URLs
+     const sections = {
+        "about us": "aboutus.html",
+        "planning tools": "planningtools.html",
+        "budget":"planningtools.html",
+        "guests list":"planningtools.html",
+        "indoor venues": "indoorvenues.html",
+        "venues":"indoorvenues.html",
+        "outdoor venues ":"outdoorvenues.html",
+        "bride":"bridaldresses.html",
+        "bridesmaids":" bridesmaid.html",
+        "accessories":"accessories.html",
+        "bridal collection": "bridaldresses.html",
+        "design and decor": "floral.html",
+        "flowers":"floral.html",
+        "tables ":"tables.html",
+        "lighting":"lightingandambiance.html",
+        "groom":"groomssuits.html",
+        "groomsmen":"groomsmen.html",
+        "suits":"groomssuits.html",
+        "groom accessories":"groomsaccessories.html",
+        "grooms accessories":"groomsaccessories.html",
+        "groomsmen accessories":"groomsaccessories.html",
+        "grooms":"groomssuits.html",
+        "start planning":"startplanning.html",
+        "real weddings":"viewall.html",
+    };
+
+
+    // Loop through each keyword and check if the search query contains that keyword
+    for (let keyword in sections) {
+        if (query.includes(keyword)) {
+            // If a match is found, navigate to the corresponding URL
+            window.location.href = sections[keyword];
+            return;  // Stop the function execution after redirection
+        }
+    }
+
+    // If no match is found, display an alert message
+    alert("No matching section found. Please try again.");
+}
+          function showAlert(message) {
+    const alertBox = document.getElementById('custom-alert');
+    const alertMessage = document.getElementById('alert-message');
+    const overlay = document.querySelector('.alert-overlay');
+
+    alertMessage.textContent = message;
+    alertBox.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// Function to hide alert (already defined)
+function hideAlert() {
+    const alertBox = document.getElementById('custom-alert');
+    const overlay = document.querySelector('.alert-overlay');
+    alertBox.style.display = 'none';
+    overlay.style.display = 'none';
+}
+
+// Close alert when clicking the overlay or the close button
+document.getElementById('close-alert').addEventListener('click', hideAlert);
+overlay.addEventListener('click', hideAlert);
+    </script>
+</body>
+</html>

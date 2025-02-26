@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Favorites</title>
+    <link rel="stylesheet" href="style15.css">
+</head>
+<body>
+    <h2>Your Favorites</h2>
+    <ul id="favorites-list"></ul>
+
+    <!-- Modal for enlarged image -->
+    <div id="modal" onclick="closeModal()">
+        <img id="modal-image" src="" alt="Enlarged Image">
+    </div>
+
+    <script>
+    // Function to load favorites from localStorage and display them
+    function loadFavorites() {
+        // Get the favorites from localStorage
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        // Get the favorites list element
+        const favoritesList = document.getElementById("favorites-list");
+
+        // Clear any existing content
+        favoritesList.innerHTML = "";
+
+        if (favorites.length === 0) {
+            favoritesList.innerHTML = "<li>No favorites yet!</li>";
+        } else {
+            // Populate the favorites list
+            favorites.forEach((fav, index) => {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `
+                    <img src="${fav.image}" alt="${fav.name}" onclick="enlargeImage('${fav.image}')">
+                    <span>${fav.name}</span>
+                    <button onclick="deleteFavorite(${index})">Delete</button>
+                `;
+                favoritesList.appendChild(listItem);
+            });
+        }
+    }
+
+    // Function to delete a favorite
+    function deleteFavorite(index) {
+        // Get the current favorites
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        // Remove the item at the specified index
+        favorites.splice(index, 1);
+
+        // Save the updated favorites to localStorage
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+
+        // Reload the favorites list
+        loadFavorites();
+    }
+
+    // Function to enlarge an image
+    function enlargeImage(imageSrc) {
+        const modal = document.getElementById("modal");
+        const modalImage = document.getElementById("modal-image");
+
+        modalImage.src = imageSrc;
+        modal.style.display = "flex";
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        const modal = document.getElementById("modal");
+        modal.style.display = "none";
+    }
+
+    // Load favorites on page load
+    window.onload = loadFavorites;
+    </script>
+</body>
+</html>

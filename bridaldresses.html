@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridal Collection</title>
+    <link rel="stylesheet" href="style6.css"> 
+</head>
+<body>
+    <div id="custom-alert" class="alert-box">
+    <div id="alert-message" class="alert-message"></div>
+    <button id="close-alert" class="close-alert">Close</button>
+</div>
+
+<!-- Alert Overlay -->
+<div class="alert-overlay"></div>
+    <header>
+         <div class="top-bar">
+    <div data-tts="Main Menu" class="menu-icon" onclick="toggleMenu()">
+        <span class="dash"></span>
+        <span class="dash"></span> 
+        <span class="dash"></span>
+    </div>
+            <button id="accessibility-btn" onclick="toggleAccessibility()" data-tts="Enable or disable accessibility features" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-universal-access-circle" viewBox="0 0 16 16">
+  <path d="M8 4.143A1.071 1.071 0 1 0 8 2a1.071 1.071 0 0 0 0 2.143m-4.668 1.47 3.24.316v2.5l-.323 4.585A.383.383 0 0 0 7 13.14l.826-4.017c.045-.18.301-.18.346 0L9 13.139a.383.383 0 0 0 .752-.125L9.43 8.43v-2.5l3.239-.316a.38.38 0 0 0-.047-.756H3.379a.38.38 0 0 0-.047.756Z"/>
+  <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8"/>
+</svg></button>
+    <div data-tts="hob forever"class="logo">
+        <img src="new4.png" alt="Forever Weddings Logo" style="width: 80px; height: 80px;" />
+    </div>
+              <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" style="margin-bottom: 4%;">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+            <input type="text" id="search-bar" placeholder="Search..." style="color: black;" data-tts="Search bar, type your query here">
+        </div>
+    </div>
+             
+     <nav id="menu-bar" class="hidden">
+    <h2 class="menu-title">حب <br>Forever</h2>
+    <div class="heart" style="text-align: center; font-size: 15px;">🖤</div>
+    <hr class="menu-divider">
+    <ul>
+       <li><a href="index.html" data-tts="Go to the homepage">Home</a></li>
+       <li class="dropdown">
+    <a href="planningtools.html" onclick="togglemenu(event)" data-tts="Planning tools">Planning Tools</a>
+            <a href="#" onclick="toggleSubmenu(event)"  data-tts="Explore venues and locations">Venues & Locations</a>
+    <ul class="submenu hidden";>
+        <li><a href="indoorvenues.html" data-tts="View indoor venues">Indoor Venues</a></li>
+        <li><a href="outdoorvenues.html"data-tts="View outdoor venues">Outdoor Venues</a></li>
+    </ul>
+            <a href="#" onclick="toggleSubmenu(event)" data-tts="Discover design and decor options">Design  & Decor</a>
+           <ul class="submenu hidden";>
+        <li><a href="floral.html"data-tts="Explore floral arrangements">Floral Arrangements</a></li>
+        <li><a href="lightingandambiance.html"data-tts="Enhance your venue with lighting and ambiance">Lighting & Ambiance</a></li>
+        <li><a href="tables.html"data-tts="Check table installations">Table Installations</a></li>
+               
+    </ul>
+           <a href="invitationcards.html" onclick="togglemenu(event)" data-tts="invitation cards">Invitation Cards</a>
+            <a href="#" onclick="toggleSubmenu(event)"  data-tts="Explore venues and locations">Grooms Collection</a>
+            <ul class="submenu hidden";>
+        <li><a href="groomssuits.html" data-tts="Shop grooms suits">Grooms Suits</a></li>
+        <li><a href="groomsmen.html"data-tts="shop groomsmen Suits">Groomsmens Suits</a></li>
+        <li><a href="groomsaccessories.html"data-tts="shop grooms accessories">Grooms Accessories</a></li>
+    </ul>
+           <a href="#" onclick="toggleSubmenu(event)" data-tts="Browse the bridal collection">Bridal Collection</a>
+
+           <ul class="submenu hidden";>
+        <li><a href="bridaldresses.html
+"data-tts="Shop bridal dresses">Bridal Dresses
+</a></li>
+               <li><a href="bridesmaid.html
+"data-tts="Shop bridesmaid dresses">Bridesmaid Dresses
+</a></li>
+        <li><a href="accessories.html"data-tts="Shop accessories and jewelry">Accessories & Jewelry</a></li>
+    </ul>
+</li>
+    </ul>
+        
+          <hr class="menu-divider">
+</nav>
+        </header>
+   <a href="profile.html" class="favorites-box">
+    
+    <img src="favoriteslogo.png">
+    </a>
+
+
+    <section id="bridal-collection">
+        <h3 data-tts="Bridal Collection">Bridal Collection</h3>
+
+        <!-- 1st Part: Gown Styles -->
+        <div class="section" id="gown-styles">
+            <h4 data-tts="Gown Styles">Gown Styles</h4>
+            <ul>
+                <li>
+                    <strong data-tts="A-line">A-line</strong>
+                    <div class="image-gallery">
+                        <img src="Aline1.jpg" alt="A-line wedding dress 1">
+                        <img src="Aline2.jpg" alt="A-line wedding dress 2">                       
+                        <img src="Aline7.jpg" alt="A-line wedding dress 3">
+                        <img src="Aline5.jpg" alt="A-line wedding dress 4">
+                        <img src="Aline6.jpg" alt="A-line wedding dress 5">
+                        
+                    </div>
+                    <button class="add-button" onclick="addToFavorites('A-line Wedding Dress 1', 'Aline1.jpg')" data-tts="Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                <li>
+                    <strong data-tts="Mermaid">Mermaid</strong>
+                    <div class="image-gallery">
+                        <img src="mermaid1.jpg" alt="Mermaid wedding dress 1">
+                        <img src="mermaid2.jpg" alt="Mermaid wedding dress 2">
+                        <img src="mermaid3.jpg" alt="Mermaid wedding dress 3">
+                        <img src="mermaid4.jpg" alt="Mermaid wedding dress 4">
+                         <img src="mermaid5.jpg" alt="Mermaid wedding dress 5">
+                    </div>
+                     <button class="add-button" onclick="addToFavorites('Mermaid wedding dress 1', 'mermaid1.jpg')" data-tts="Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Ball Gown">Ball Gown</strong>
+                    <div class="image-gallery">
+                        <img src="ballgown1.jpg" alt="Ball gown wedding dress 1">
+                        <img src="ballgown2.jpg" alt="Ball gown wedding dress 2">
+                         <img src="ballgown3.jpg" alt="Ball gown wedding dress 1">
+                        <img src="ballgown4.jpg" alt="Ball gown wedding dress 2">
+                        <img src="ballgown5.jpg" alt="Ball gown wedding dress 2">
+                    </div>
+                    <button class="add-button" onclick="addToFavorites('Ball gown','ballgown1.jpg')" data-tts="Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Sheath">Sheath</strong>
+                    <div class="image-gallery">
+                        <img src="sheath1.jpg" alt="Sheath wedding dress 1">
+                        <img src="sheath2.jpg" alt="Sheath wedding dress 2">
+                        <img src="sheath3.jpg" alt="Sheath wedding dress 1">
+                        <img src="sheath4.jpg" alt="Sheath wedding dress 2">
+                         <img src="sheath5.jpg" alt="Sheath wedding dress 2">
+                    </div>
+                    <button class="add-button" onclick="addToFavorites('Sheath wedding dress ', 'sheath1.jpg')" data-tts=" Add to Favorites">Add to Favorites</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 2nd Part: Fabric Types -->
+        <div class="section" id="fabric-types">
+            <h4 data-tts="Fabric Types">Fabric Types</h4>
+            <ul>
+                <li>
+                    <strong data-tts="Lace">Lace</strong>
+                    <div class="image-gallery">
+                        <img src="lace1.jpg" alt="Lace fabric wedding dress 1">
+                        <img src="lace2.jpg" alt="Lace fabric wedding dress 2">
+                        <img src="lace3.jpg" alt="Lace fabric wedding dress 3">
+                        <img src="lace4.jpg" alt="Lace fabric wedding dress 4">
+                        <img src="lace5.jpg" alt="Lace fabric wedding dress 5">
+                        
+                    </div>
+                     <button class="add-button" onclick="addToFavorites('Lace fabric wedding dress ', 'lace1.jpg')" data-tts="Add to Favorites">Add to Favorites</button>
+                </li>
+                <li>
+                    <strong data-tts="Satin" >Satin</strong>
+                    <div class="image-gallery">
+                        <img src="satin1.jpg" alt="Satin fabric wedding dress">
+                        <img src="satin2.jpg" alt="Satin fabric wedding dress ">
+                        <img src="satin3.jpg" alt="Satin fabric wedding dress">
+                        <img src="satin4.jpg" alt="Satin fabric wedding dress ">
+                        <img src="satin5.jpg" alt="Satin fabric wedding dress">
+                        
+                    </div>
+                  <button class="add-button" onclick="addToFavorites('Satin fabric wedding dress ', 'satin1.jpg')" data-tts="Add to Favorites">Add to Favorites</button>
+                </li>
+               
+                <li>
+                    <strong data-tts="Tulle">Tulle</strong>
+                    <div class="image-gallery">
+                        <img src="tulle1.jpg" alt="Tulle fabric wedding dress">
+                        <img src="tulle2.jpg" alt="Tulle fabric wedding dress ">
+                        <img src="tulle3.jpg" alt="Tulle fabric wedding dress">
+                        <img src="tulle4.jpg" alt="Tulle fabric wedding dress ">
+                        <img src="tulle5.jpg" alt="Tulle fabric wedding dress">
+                        
+                    </div>
+                    <button class="add-button" onclick="addToFavorites('Tulle fabric wedding dress ', 'tulle1.jpg')" data-tts="Add to Favorites">Add to Favorites</button>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="section" id="custom-gowns">
+            <h4 data-tts="Custom Gowns">Custom Gowns</h4>
+            <p data-tts=" Work with us to create your dream dress with bespoke designs and tailoring services." data-tts="Add to Favorites">Work with us to create your dream dress with bespoke designs and tailoring services.</p>
+        </div>
+
+        <!-- 5th Part: Real Weddings -->
+        <div class="section" id="real-weddings">
+            <h4 data-tts="Real Weddings">Real Weddings</h4>
+            <p data-tts="See how our brides have styled their gowns on their big day">See how our brides have styled their gowns on their big day.</p>
+            <div class="image-gallery">
+                <img src="real_wedding1.jpg" alt="Real wedding bride 1 ">
+                <img src="real_wedding2.jpg" alt="Real wedding bride 2 ">
+                <img src="real_wedding3.jpg" alt="Real wedding bride 3 ">
+                <img src="real_wedding4.jpg" alt="Real wedding bride 4 ">
+                <img src="real_wedding5.jpg" alt="Real wedding bride 5 ">
+            </div>
+             <button class="add-button" onclick="addToFavorites('real_weddings dresses ', 'real_wedding1.jpg')" data-tts="Add to Favorites">Add to Favorites</button>
+        </div>
+    </section>
+   <script>
+       function toggleMenu() {
+        const menuBar = document.getElementById("menu-bar");
+        menuBar.classList.toggle("hidden");
+        menuBar.classList.toggle("visible");
+    }
+
+    document.addEventListener("click", function(event) {
+        const menuBar = document.getElementById("menu-bar");
+        const menuIcon = document.querySelector(".menu-icon");
+
+        if (!menuBar.contains(event.target) && !menuIcon.contains(event.target)) {
+            menuBar.classList.add("hidden");
+            menuBar.classList.remove("visible");
+        }
+    });
+
+    function toggleSubmenu(event) {
+        event.preventDefault();
+
+        const allSubmenus = document.querySelectorAll(".submenu");
+        
+        // Close all other submenus
+        allSubmenus.forEach(submenu => {
+            if (submenu !== event.target.nextElementSibling) {
+                submenu.classList.add("hidden");
+                submenu.classList.remove("visible");
+            }
+        });
+
+        
+        const submenu = event.target.nextElementSibling;
+        if (submenu && submenu.classList.contains("submenu")) {
+            submenu.classList.toggle("hidden");
+            submenu.classList.toggle("visible");
+        }
+    }
+ function addToFavorites(name, image) {
+    // Retrieve existing favorites from localStorage or initialize an empty array
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    // Check if the item already exists in the favorites
+    const alreadyFavorited = favorites.some(fav => fav.name === name && fav.image === image);
+    if (alreadyFavorited) {
+        // Show an alert that item is already favorited
+        showAlert("This item is already in your favorites!");
+        return;
+    }
+
+    // Add the new favorite
+    favorites.push({ name, image });
+
+    // Save back to localStorage
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+
+    // Show an alert that the item has been added to favorites
+    showAlert("Item added to your favorites!");
+}
+       function toggleAccessibility() {
+        // Check if accessibility mode is enabled
+        const accessibilityEnabled = document.body.getAttribute('data-accessibility') === 'true';
+        document.body.setAttribute('data-accessibility', !accessibilityEnabled);
+
+        // Select the button element
+        const button = document.getElementById('accessibility-btn');
+
+        if (!accessibilityEnabled) {
+            // Enable TTS and add active class for styling
+            button.classList.add('active'); // *Add 'active' class*
+            enableTTS();
+        } else {
+            // Disable TTS and remove active class for styling
+            button.classList.remove('active'); // *Remove 'active' class*
+            disableTTS();
+        }
+    }
+
+    function enableTTS() {
+        const ttsElements = document.querySelectorAll('[data-tts]');
+        ttsElements.forEach(element => {
+            element.addEventListener('mouseenter', handleMouseEnter);
+            element.addEventListener('mouseleave', handleMouseLeave);
+        });
+    }
+
+    function disableTTS() {
+        const ttsElements = document.querySelectorAll('[data-tts]');
+        ttsElements.forEach(element => {
+            element.removeEventListener('mouseenter', handleMouseEnter);
+            element.removeEventListener('mouseleave', handleMouseLeave);
+        });
+    }
+
+    let synth = window.speechSynthesis;
+    let utterance;
+
+    function handleMouseEnter(event) {
+        const text = event.target.getAttribute('data-tts');
+        if (text) {
+            utterance = new SpeechSynthesisUtterance(text);
+            synth.speak(utterance);
+        }
+    }
+
+    function handleMouseLeave() {
+        if (utterance) {
+            synth.cancel();
+        }
+    }
+            document.getElementById("search-bar").addEventListener("keypress", function (event) {
+    // Check if the Enter key was pressed
+    if (event.key === "Enter") {
+        event.preventDefault();
+        performSearch();
+    }
+});
+function performSearch() {
+    // Get the search input value, trim it to remove excess spaces, and convert it to lowercase
+    const query = document.getElementById("search-bar").value.trim().toLowerCase();
+
+    // Define an object that maps keywords to specific section URLs
+     const sections = {
+        "about us": "aboutus.html",
+        "planning tools": "planningtools.html",
+        "budget":"planningtools.html",
+        "guests list":"planningtools.html",
+        "indoor venues": "indoorvenues.html",
+        "venues":"indoorvenues.html",
+        "outdoor venues ":"outdoorvenues.html",
+        "bride":"bridaldresses.html",
+        "bridesmaids":" bridesmaid.html",
+        "accessories":"accessories.html",
+        "bridal collection": "bridaldresses.html",
+        "design and decor": "floral.html",
+        "flowers":"floral.html",
+        "tables ":"tables.html",
+        "lighting":"lightingandambiance.html",
+        "groom":"groomssuits.html",
+        "groomsmen":"groomsmen.html",
+        "suits":"groomssuits.html",
+        "groom accessories":"groomsaccessories.html",
+        "grooms accessories":"groomsaccessories.html",
+        "groomsmen accessories":"groomsaccessories.html",
+        "grooms":"groomssuits.html",
+        "start planning":"startplanning.html",
+        "real weddings":"viewall.html",
+    };
+
+    // Loop through each keyword and check if the search query contains that keyword
+    for (let keyword in sections) {
+        if (query.includes(keyword)) {
+            // If a match is found, navigate to the corresponding URL
+            window.location.href = sections[keyword];
+            return;  // Stop the function execution after redirection
+        }
+    }
+
+    // If no match is found, display an alert message
+    alert("No matching section found. Please try again.");
+}
+ function showAlert(message) {
+    const alertBox = document.getElementById('custom-alert');
+    const alertMessage = document.getElementById('alert-message');
+    const overlay = document.querySelector('.alert-overlay');
+
+    alertMessage.textContent = message;
+    alertBox.style.display = 'block';
+    overlay.style.display = 'block';
+}
+
+// Function to hide alert (already defined)
+function hideAlert() {
+    const alertBox = document.getElementById('custom-alert');
+    const overlay = document.querySelector('.alert-overlay');
+    alertBox.style.display = 'none';
+    overlay.style.display = 'none';
+}
+
+// Close alert when clicking the overlay or the close button
+document.getElementById('close-alert').addEventListener('click', hideAlert);
+overlay.addEventListener('click', hideAlert);
+</script>
+    
+</html>
