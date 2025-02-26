@@ -1,0 +1,190 @@
+body, h1, h2, h3, p, select, label {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif; /* Elegant font */
+}
+
+/* Body styles */
+body {
+    background: url('back8.jpg')no-repeat;
+    background-size: cover;
+     background-position: center;
+    min-height: 100vh;
+
+    background-color: #f9f9f9; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
+    padding: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the form */
+.container {
+    max-width: 800px;
+    margin: auto;
+   
+    padding: 20px;
+    border-radius: 34px;
+    background-color: rgba(255, 255, 255, 0.8); /* White transparent background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styles */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #444; /* Darker shade for the title */
+}
+
+/* Fieldset styles */
+fieldset {
+    border: 2px solid black; /* Light gray border */
+    border-radius: 34px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* Legend styles */
+legend {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #555; /* Medium gray for legend */
+}
+
+/* Success Message Styling */
+#success-message {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fix it to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1000; /* Ensure it's above all other elements */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Styling the white content box */
+#success-message .content {
+    background-color: white; /* White background for the message */
+    padding: 30px 40px; /* Add padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center the text inside */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    max-width: 500px; /* Limit the width */
+    width: 90%; /* Responsive width for smaller screens */
+}
+
+#success-message .content button {
+    background-color:black; /* Primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0px; /* Remove rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+/* Heading Styles */
+
+/* Label styles */
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Select and checkbox group styles */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 35px;
+}
+
+.checkbox-group {
+    margin-bottom: 10px;
+}
+
+/* Checkbox styles */
+.checkbox-group label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Submit button styles */
+/* Centering the submit button */
+.button-container {
+    text-align: center; /* Center the content */
+    margin-top: 20px; /* Add some space above the button */
+}
+
+button {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Add some padding */
+    border: none; /* Remove border */
+    border-radius: 0px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #444; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    select {
+        font-size: 0.9em;
+    }
+
+    input[type="submit"] {
+        font-size: 0.9em;
+    }
+}
+ .personal-details {
+    display: flex;
+    flex-direction: column; /* Keeps items in a vertical column */
+    align-items: flex-start; /* Aligns all items to the left */
+    width: 80%; /* Adjusted width for a smaller box */
+    max-width: 400px; /* Optional: limits the maximum width of the box */
+    margin: 200px auto; /* Centers the box horizontally and adds space above */
+    padding: 20px; /* Adds padding inside the box */
+    border: none; /* Optional: adds a border */
+    border-radius: 34px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.8);;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+
+.input-group {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 10px; /* Space between each group */
+    width: 100%; /* Full width */
+}
+
+.input-group label {
+    width: 30%; /* Adjust as needed for label width */
+    margin-right: 10px; /* Space between label and input */
+}
+
+.input-group input{
+    border-radius: 34px;
+    z-index: 100;
+border-color: #00000000;
+}

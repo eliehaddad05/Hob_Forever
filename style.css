@@ -1,0 +1,577 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+header  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #737373;
+    height: 55px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+    
+.hidden {
+    transform: translateY(-100%); /* Move up */
+}
+
+.visible {
+    transform: translateY(0); /* Reset position */
+}
+
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+     z-index: 100;
+    position: relative;
+}
+
+.menu-icon .dash {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    gap:10px;
+}
+
+.menu-icon {
+    display: flex;
+}
+
+.logo {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.search-icon {
+    margin-left: auto;
+    color: black;
+    border-color: transparent;
+    margin-top: auto;
+}
+
+.search-icon input {
+    padding: 4px;
+    padding-left: 35%;
+    margin-left: -33px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    width: 120px;
+   background-color: transparent;
+    color: black;
+    border-color: transparent;
+}
+ input::placeholder{
+    color: black;
+     opacity: 1;
+}
+
+
+.log-in-button, .log-in-button button {
+  
+    background-color: transparent;
+    border: none;
+    outline: none;
+    outline: none;
+    border-color: transparent;
+}
+
+#menu-bar {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left:0;
+    border: 1px solid #ddd;
+    width: 258.5px;
+    height: 106%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    
+}
+
+#menu-bar ul {
+    padding-top: 0px;   
+}
+
+
+#menu-bar ul li {
+    margin: 10px 0;
+}
+
+#menu-bar ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 15px ;
+    display: flex;
+    margin-right: 48px;
+    transition: background-color 0.3s;
+    transition: transform 0.3s ease;
+} 
+.menu-title {
+    font-size: 22px;
+    font-family: 'Zeyada', cursive;
+    text-align: center;
+    margin-bottom: 0x;
+    padding-top: 20px;
+} 
+.heart {
+    font-size: 15px; 
+    margin: 0; 
+}
+
+.menu-divider {
+    border: 0;
+    height: 1px;
+    background-color: #ddd; 
+    margin: 10px 0; 
+}
+
+#menu-bar ul li a:hover {
+    background-color: #f0f0f0; 
+    width: 97%;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+#menu-bar.visible {
+    display: block;
+}
+
+.submenu {
+    list-style: none;
+    padding-left: 0;
+    display:none;
+}
+
+.dropdown > a {
+    cursor: pointer;
+}
+
+.submenu li a {
+    font-size: 14px; 
+    color: #666;
+}
+
+.submenu li a:hover {
+    color: #333; 
+    background-color: #f0f0f0;
+}
+.submenu li {
+    position: relative; 
+    padding-left: 25px; 
+    margin-bottom:10px; 
+    line-height: 0.8;
+}
+.submenu li::before {
+    content: "❤"; 
+    position: absolute; 
+    left:0; 
+    font-size: 16px; 
+    top:50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease; 
+}
+
+.submenu li::before:hover{
+    transform: scale(1.05);
+}
+
+.submenu.visible {
+    display: block; 
+}
+
+
+nav {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    z-index: 3; 
+    text-align: center; 
+}
+
+
+nav ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+
+nav li {
+    padding: 10px 0; 
+}
+
+
+nav a {
+    text-decoration: none; 
+    color: #333; 
+    font-weight: bold; 
+}
+
+main {
+    text-align: center;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+}
+
+.hero {
+    margin-top: 0px;
+}
+
+.slogan h2 {
+    color: black;
+    font-size: 32px;
+}
+
+.cta a button {
+    padding: 15px 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 35px;
+    transition: transform 0.3s ease;
+}
+.cta a button:hover{
+    
+     transform: scale(1.05);
+}
+real-weddings {
+    margin-top: 100%;
+    margin-bottom: 0; 
+    padding-bottom: 0; 
+}
+
+footer {
+    padding: 0; 
+    margin-bottom: 0; 
+}
+
+body {
+    margin: 0; 
+    padding: 0; 
+}
+.view-all-button {
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 35px;
+}
+
+.view-all-button button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1%;
+    transition: transform 0.3s ease;
+}
+
+.view-all-button button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px 0; 
+    margin-top: 20px;
+}
+
+.about-us, .contact-us, .made-with-love {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-us a img {
+    width: 24px;
+    height: auto;
+    margin: 0 10px;
+}
+.contact-us a{
+    color: transparent;
+    text-decoration: none;
+    
+}
+.contact-us a:hover{
+    color: transparent;
+    text-decoration: none;
+    
+}
+.about-us a:hover{
+    text-decoration: none;
+    color: white;
+}
+.about-us a{
+    text-decoration: none;
+    
+}
+.back {
+    position: relative; 
+    text-align: center; 
+    color: white; 
+    height: 100vh; 
+    overflow: hidden; 
+}
+.back-image {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: 1; 
+     transition: transform 1s ease-in-out; 
+}
+
+.content {
+    position: relative; 
+    z-index: 2; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    padding: 20px;
+}
+
+.cta {
+    margin-bottom: 20px; 
+    border-radius: 35px;
+}
+
+h2 {
+    margin: 0; 
+    font-size: 24px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+.h3, h3 {
+    font-size: 1.75rem;
+    padding-top: 10px;
+    font-weight: bolder;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 25px;
+    font-family: system-ui;
+}
+
+#imgdivider{
+    padding-top: 30px;
+    width: 90%;
+}
+.wedding-gallery {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+    margin-top: 20px; 
+}
+
+.wedding-gallery img{
+    width: 32%; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
+    padding: 15px;
+}
+
+
+.wedding-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.footer-container {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 20px ; 
+    margin-top: 20; 
+    background-color: #737373; 
+}
+
+.about-us, .contact-us, .made-with-love {
+    width: 30%; 
+}
+
+.footer-container img {
+    width: 40px; 
+    height: auto;
+  
+    margin-right:10px; 
+}
+
+.about-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #737373;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#pheader{
+    font-size: 17px;
+    font-weight: 600;
+
+}
+#accessibility-btn {
+    background-color: transparent; /* Match header color or use any contrasting color */
+    color: black;
+    border: none;
+    padding: 0px 0px;
+    font-size: 2px;
+    cursor: pointer;
+    border-radius: 55px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#accessibility-btn:hover {
+    background-color: transparent; /* Change to a darker shade on hover */
+    border: none;
+    outline: none;
+}
+
+#accessibility-btn.active {
+    background-color: black;/* Green background when enabled */
+    color: white;
+    padding: 0px;
+    /* White text color when enabled */
+}
+
+#accessibility-btn svg {
+        width:  24px;/* Adjust the width as desired */
+        height: 24px; /* Adjust the height as desired */
+    }
+@media (max-width: 768px) {
+   
+    header {
+        padding: 10px;
+        flex-direction: column; 
+    }
+    
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .hero h2 {
+        font-size: 20px; 
+    }
+    
+    .cta a button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 35px;
+    }
+    .wedding-gallery {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .wedding-gallery img {
+        width: 100%; 
+    }
+    .footer-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .about-us, .contact-us, .made-with-love {
+        width: 100%; 
+        text-align: center;
+    }
+    
+}
+@media (max-width: 1024px) {
+    header {
+        padding: 5px;
+    }
+
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .cta a button {
+        padding: 12px 25px;
+        font-size: 18px;
+        border-radius: 35px;
+    }
+
+    .wedding-gallery {
+        flex-direction: column;  
+        align-items: center; 
+      
+    }
+
+    .wedding-gallery img {
+        width: 48%; 
+        margin-bottom: 10px; 
+     
+    }
+
+    .wedding-gallery img:nth-child(3) {
+        width: 48%; 
+        margin-top: 10px; 
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us, .contact-us, .made-with-love {
+        width: 100%; 
+    }
+   
+}
+
